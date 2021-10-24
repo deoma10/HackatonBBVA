@@ -1,5 +1,9 @@
 # Vincula Inteligente para <a href="https://twitter.com/BBVAInnovation">#HackathonBBVA2021</a>
 
+## Entregable Final
+
+<a href="videoyoutube">Video de youtube</a>
+
 ## Problema a solucionar 
 
 ### Reto
@@ -31,18 +35,20 @@ Presenta problemas de robustez frente a outliers. La única solución es excluir
 
 ## Variables principales:
 
+Bajo nuestro criterio consideramos que las siguientes variables son las de mayor peso:
+
 * Tenencias del producto:
-  * saldo: Un mayor saldo es más conveniente.Representa un mayor volumen de negocio y una mayor ganancia por el importe en intereses que genera
-* Rentabilidad el cliente:
-  * ganancias y pérdidas
-* Rentabilidad del producto:
-  * Ganancias y pérdidas que se generan por cada producto que tiene el cliente
-* Detalle tarjeta de crédito
-  * Todos los movimientos
-* Información RCC 
-  * info de los dos productos que tiene un cliente
+   * saldo: Un mayor saldo es más conveniente. Representa un mayor volumen de negocio y una mayor ganancia por el importe en intereses que genera
+ * Rentabilidad el cliente:
+   * ganancias y pérdidas
+ * Rentabilidad del producto:
+   * Ganancias y pérdidas que se generan por cada producto que tiene el cliente
+ * Detalle tarjeta de crédito
+   * Todos los movimientos
+ * Información RCC 
+   * info de los dos productos que tiene un cliente
+ 
+Estas variables fueron escogidas ya que mientras más productos tenga el cliente en el banco va a tender más a quedarse y ciertas en más a quedarse incluso hay productos que propician a que los clientes se queden, en estos productos están incluidos todo lo referente con autoservicios es decir la banca telefonica y electronica. Cabe resaltar que la banca electrónica, además de bajar los costos de operación permite mayor flexibilidad para los usuarios que genera una sensación de bienestar
 
+## Objetivos alcanzados
 
-## Análisis de la base datos:
-
-Pendientes
