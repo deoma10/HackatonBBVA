@@ -1,6 +1,6 @@
-★ Vincula inteligente BBVA - (Nombre del proyecto)
+★ Vincula inteligente BBVA - (Hackton BBVA 2021)
 
-    ★ Solución a construir
+★ Solución a construir
 
     ○ Nuestro modelo analítico hará un clustering haciendo uso del método Silhouette Score para escoger de acuerdo a diversas segmentaciones el número de clusters adecuados para maximizar la rentabilidad. Estas segmentaciones sobre la rentabilidad podrán ser hechas teniendo en cuenta diferentes criterios como: socioeconómicos, psicográficos, relacionado con el tipo del producto, según la frecuencia de compra e inclusive el volumen de saldos.
 
