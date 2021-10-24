@@ -1,31 +1,48 @@
-★ Vincula inteligente BBVA - (Hackton BBVA 2021)
+# Vincula Inteligente para <a href="https://twitter.com/BBVAInnovation">#HackathonBBVA2021</a>
 
-★ Solución a construir
+## Problema a solucionar 
 
-    ○ Nuestro modelo analítico hará un clustering haciendo uso del método Silhouette Score para escoger de acuerdo a diversas segmentaciones el número de clusters adecuados para maximizar la rentabilidad. Estas segmentaciones sobre la rentabilidad podrán ser hechas teniendo en cuenta diferentes criterios como: socioeconómicos, psicográficos, relacionado con el tipo del producto, según la frecuencia de compra e inclusive el volumen de saldos.
+### Reto
 
-    Teniendo en cuenta que método k-mean no es compatible con variables no numéricas, hemos decidido que las variables cualitativas serán estratificadas o binarizadas dependiendo de si son dicotómicas o no. De esta manera podemos vincular o relacionar variables que a simple inspección no podrían ser relacionadas.
+* Buscar un modelo para incorporar la rentabilidad dentro del modelo de vinculación
+* Modelo analitico que permita generar clusteres asociados a perfil de cliente y combinación de productos con miras a generar palancas de acción para maximizar la rentabilidad.
 
-    Luego de determinar la cantidad de clusters que serán óptimos para identificar los factores que maximizan la rentabilidad, aplicaremos técnicas de machine learning  que permitan encontrar las máscaras adecuadas para clasificar los productos que aumentan la rentabilidad y tienen un mayor beneficio para el cliente de acuerdo a su perfil.
+### Lo que queremos hacer:
 
-★ Descripción técnica de la solución
+* Usar métodos de clustering para separar los datos, y a partir de estos sacar las conclusiones necesarias para hallar el como optimizazar y maximizar la rentabilidad.
+* <a href="https://dzone.com/articles/kmeans-silhouette-score-explained-with-python-exam">K-means Silhouette Score</a>
 
-    ○ Nuestro modelo analítico hará un clustering haciendo uso del método Silhouette Score para escoger de acuerdo a diversas segmentaciones el número de clusters adecuados para maximizar la rentabilidad. Estas segmentaciones sobre la rentabilidad podrán ser hechas teniendo en cuenta diferentes criterios como: socioeconómicos, psicográficos, relacionado con el tipo del producto, según la frecuencia de compra e inclusive el volumen de saldos.
+## Herramientas a usar
 
-    Teniendo en cuenta que método k-mean no es compatible con variables no numéricas, hemos decidido que las variables cualitativas serán estratificadas o binarizadas dependiendo de si son dicotómicas o no. De esta manera podemos vincular o relacionar variables que a simple inspección no podrían ser relacionadas.
+### Usando Google Colaboratory
 
-    Luego de determinar la cantidad de clusters que serán óptimos para identificar los factores que maximizan la rentabilidad, aplicaremos técnicas de machine learning  que permitan encontrar las máscaras adecuadas para clasificar los productos que aumentan la rentabilidad y tienen un mayor beneficio para el cliente de acuerdo a su perfil.
+Google Colaboratory es una herramienta que usa un modelo de ejecución por bloques de codigos distribuidos por celdas, denominado notebooks, con extencion .ipynb y estas corren en sus celdas por defecto el lenguaje Python3, del cual aprovecharemos unas cuantas librerías como Matplotlib, Pandas, Numpy y Scikit-learn. Ahora, ya que la herramienta de Colaboratory es de computo remoto, podemos cargar las bases de datos (las cuales son bastante voluminicas) y poderlas manipular con mayor facilidad, las bases de datos han sido cargadas desde el drive.
 
-    Para empezar cargamos las 7 bases de datos proporcionadas al drive de cada uno. Luego, se conectan estas bases de datos a Google Colaboratory y haciendo uso de la librería Pandas, hacemos un cast de estos archivos .csv a DataFrames con los cuales trabajar. Colaboratory nos permite manipular con mayor fluidez los datos, ya que al ser tan voluminosos se hacen engorrosos en su manejo.
+### Usando k-means
 
-    Con las bases cargadas y formateadas en DataFrames, empezamos a gráficar las variables para obtener correlaciones, sacar conclusiones a partir de estas y luego, haciendo uso de la librería Scikit Learn que provee las herramientas para desarrollar el clustering por medio del método Silhouette Score. Los datos proporcionados en los Data Frames fueron particionados de la siguiente forma:
+K-means es uno de los métodos de clustering más utilizados. Destaca por la sencillez y velocidad de su algoritmo, sin embargo, presenta una serie de limitaciones que se deben tener en cuenta.
 
-    20% de la BD original para desarrollar el modelo
-    20% de la BD original para pruebas
-    60% de la BD para hacer validar y mostrar los resultados.
+Requiere que se indique de antemano el número de clusters que se van a crear. Esto puede ser complicado si no se dispone de información adicional sobre los datos con los que se trabaja. Se han desarrollado varias estrategias para ayudar a identificar potenciales valores óptimos de K (elbow, shilouette), pero todas ellas son orientativas.
 
-    El paso a seguir es terminar de relacionar las variables para llegar al número óptimo de clusters y sacar conclusiones que nos permitan diseñar un pull de productos teniendo en cuenta los ya existentes y otros que propongamos; para ofrecer a los clientes que estén en cada cluster.
+Dificultad para detectar clusters alargados o con formas irregulares.
 
-★ Lista de las principales tecnologías
+Las agrupaciones resultantes pueden variar dependiendo de la asignación aleatoria inicial de los centroides. Para minimizar este problema, se recomienda repetir el proceso de clustering entre 25-50 veces y seleccionar como resultado definitivo el que tenga menor suma total de varianza interna. Aun así, solo se puede garantizar la reproducibilidad de los resultados si se emplean semillas.
+Presenta problemas de robustez frente a outliers. La única solución es excluirlos o recurrir a otros métodos de clustering más robustos como K-medoids (PAM).
 
-    ○ Google Drive, Webex,  Python con las librerías: Pandas, scikit learn, matplotlib por medio del intérprete en Spyder 3.0. Servicios en la nube: Google Colaboratory Para el Frontend tenemos pensado crearlo usando JavaScript, HTML, CSS y montarlo en Heroku.
+## Variables principales:
+
+* Tenencias del producto:
+  * saldo: Un mayor saldo es más conveniente.Representa un mayor volumen de negocio y una mayor ganancia por el importe en intereses que genera
+* Rentabilidad el cliente:
+  * ganancias y pérdidas
+* Rentabilidad del producto:
+  * Ganancias y pérdidas que se generan por cada producto que tiene el cliente
+* Detalle tarjeta de crédito
+  * Todos los movimientos
+* Información RCC 
+  * info de los dos productos que tiene un cliente
+
+
+## Análisis de la base datos:
+
+Pendientes
