@@ -7,9 +7,8 @@
 }
 
 body{
-    /* height: 200vh; */
     background-image: linear-gradient(to left bottom, #0c3473, #153260, #1d2f4e, #222b3b, #262729);
-	font-family: 'Helvetica', 'Arial', sans-serif;
+  	font-family: 'Helvetica', 'Arial', sans-serif;
 
     align-items: center;
     display: flex;
@@ -162,9 +161,11 @@ body{
 
   }
 
-/* //////////////////////////////////////////////////////////// */
+/* Header//////////////////////////////////////////////////////////////////////////// */
 .header{
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 .header .header__logo-BBVA{
     display: flex;
